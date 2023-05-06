@@ -20,6 +20,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-[#121212] text-neutral-100;
   }

@@ -23,7 +23,14 @@ export default function RootLayout({
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script src='https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js'></script>
       </head>
-      <body className={inter.className}>
+      <body
+        className={inter.className}
+        style={{
+          backgroundImage: `url('/bg.svg')`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center -12px',
+          backgroundSize: '64rem',
+        }}>
         <Header />
         <main className='layout'>{children}</main>
         <Footer />
