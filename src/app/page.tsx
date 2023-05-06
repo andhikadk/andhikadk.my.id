@@ -1,7 +1,7 @@
 import Hero from '@/components/sections/Hero';
 import Notes from '@/components/sections/Notes';
 import Projects from '@/components/sections/Projects';
-import Repo from '@/components/sections/Repo';
+import Repos from '@/components/sections/Repos';
 
 export default function Home() {
   return (
@@ -9,7 +9,8 @@ export default function Home() {
       <Hero />
       <Projects />
       <Notes />
-      <Repo />
+      {/* @ts-expect-error Server Component */}
+      <Repos />
     </>
   );
 }

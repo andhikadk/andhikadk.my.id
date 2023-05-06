@@ -5,7 +5,11 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['picsum.photos', 'avatars.githubusercontent.com'],
+    domains: [
+      'picsum.photos',
+      'avatars.githubusercontent.com',
+      'drive.google.com',
+    ],
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 };

@@ -1,6 +1,8 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 
+import { heroLinks } from '@/constants';
 import { Icon } from '@iconify/react';
 
 const Hero = () => {
@@ -22,30 +24,17 @@ const Hero = () => {
         A software engineer from Indonesia who love building things
       </p>
       <div className='flex gap-4 mt-4'>
-        <a
-          href='https://linkedin.com/in/andhikadk/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='flex flex-row items-center gap-1 text-neutral-400 hover:text-emerald-500'>
-          <Icon icon='mdi:linkedin' className='w-8 h-8 md:w-5 md:h-5' />
-          <span className='hidden md:inline'>Linkedin</span>
-        </a>
-        <a
-          href='https://github.com/andhikadk'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='flex flex-row items-center gap-1 text-neutral-400 hover:text-emerald-500'>
-          <Icon icon='mdi:github' className='w-8 h-8 md:w-5 md:h-5' />
-          <span className='hidden md:inline'>Github</span>
-        </a>
-        <a
-          href='https://cakeresume.com/andhikadk'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='flex flex-row items-center gap-1 text-neutral-400 hover:text-emerald-500'>
-          <Icon icon='mdi:file-document' className='w-8 h-8 md:w-5 md:h-5' />
-          <span className='hidden md:inline'>Resume</span>
-        </a>
+        {heroLinks.map(({ name, link, icon }) => (
+          <Link
+            key={link}
+            href={link}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='flex flex-row items-center gap-1 text-neutral-400 link'>
+            <Icon icon={icon} className='w-8 h-8 md:w-5 md:h-5' />
+            <span className='hidden md:inline'>{name}</span>
+          </Link>
+        ))}
       </div>
     </section>
   );

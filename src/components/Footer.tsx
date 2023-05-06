@@ -4,9 +4,9 @@ import { footerLinks } from '@/constants';
 
 const Footer = () => {
   return (
-    <footer className='layout mt-4 pb-28 md:pb-0'>
+    <footer className='layout mt-12 pb-28 md:pb-0'>
       <div className='flex flex-col text-center items-center justify-center gap-6 p-4 border-t border-neutral-700'>
-        <div className='flex flex-wrap items-center justify-evenly gap-4'>
+        <div className='flex flex-wrap items-center justify-evenly gap-6'>
           {footerLinks.map(({ name, link }) => (
             <Link
               key={link}

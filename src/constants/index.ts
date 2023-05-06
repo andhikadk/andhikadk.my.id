@@ -1,4 +1,22 @@
-import { FooterLink, Route } from '@/interfaces';
+import { FooterLink, HeroLink, Route } from '@/interfaces';
+
+export const heroLinks: HeroLink[] = [
+  {
+    name: 'LinkedIn',
+    link: 'https://linkedin.com/in/andhikadk/',
+    icon: 'mdi:linkedin',
+  },
+  {
+    name: 'GitHub',
+    link: 'https://github.com/andhikadk',
+    icon: 'mdi:github',
+  },
+  {
+    name: 'Resume',
+    link: 'https://cakeresume.com/andhikadk',
+    icon: 'mdi:file-document-edit-outline',
+  },
+];
 
 export const routes: Route[] = [
   {

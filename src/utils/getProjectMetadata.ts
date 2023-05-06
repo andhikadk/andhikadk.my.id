@@ -3,9 +3,34 @@ import matter from 'gray-matter';
 
 import { ProjectMetadata } from '@/interfaces';
 
-const getProjectMetadata = (): ProjectMetadata[] => {
+const getProjectMetadata = (projectSlug?: string): ProjectMetadata[] => {
   const folder = 'src/data/projects/';
   const files = fs.readdirSync(folder);
+
+  if (projectSlug) {
+    try {
+      const fileContents = fs.readFileSync(
+        `${folder}${projectSlug}.mdx`,
+        'utf8'
+      );
+      if (fileContents === undefined) return [];
+      const matterResult = matter(fileContents);
+      const project = {
+        title: matterResult.data.title,
+        date: matterResult.data.date,
+        description: matterResult.data.description,
+        demo: matterResult.data.demo,
+        source: matterResult.data.source,
+        type: matterResult.data.type,
+        banner: matterResult.data.banner,
+        stack: matterResult.data.stack,
+        slug: projectSlug,
+      };
+      return [project];
+    } catch (error: any) {
+      if (error.code === 'ENOENT') return [];
+    }
+  }
 
   const markdownProjects = files.filter((file) => file.endsWith('.mdx'));
 
@@ -19,6 +44,7 @@ const getProjectMetadata = (): ProjectMetadata[] => {
       demo: matterResult.data.demo,
       source: matterResult.data.source,
       type: matterResult.data.type,
+      banner: matterResult.data.banner,
       stack: matterResult.data.stack,
       slug: fileName.replace('.mdx', ''),
     };
