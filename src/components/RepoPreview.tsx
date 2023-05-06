@@ -14,9 +14,7 @@ const RepoPreview = ({ repo }: any) => {
           {repo.name}
         </Link>
       </h3>
-      <p className='text-gray-600 dark:text-gray-400 mt-2 flex-1'>
-        {repo.description}
-      </p>
+      <p className='text-gray-400 mt-2 flex-1'>{repo.description}</p>
       <div className='flex flex-row gap-2 items-center mt-4'>
         <span className='text-sm font-semibold flex items-center gap-1'>
           {repo.language && repo.language}

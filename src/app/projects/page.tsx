@@ -9,13 +9,13 @@ const Projects = () => {
     .map((project) => <ProjectPreview key={project.slug} {...project} />);
 
   return (
-    <div className='flex flex-col py-12 md:py-28'>
+    <section className='flex flex-col py-12 md:py-28'>
       <h1 className='accent font-bold'>My Projects</h1>
       <p className='text-neutral-200 mt-2'>
         All projects i have worked on, both personal and professional.
       </p>
       <div className='grid grid-cols-3 mt-8 gap-4'>{projectPreview}</div>
-    </div>
+    </section>
   );
 };
 

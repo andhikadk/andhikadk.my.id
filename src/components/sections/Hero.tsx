@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section
       id='hero'
-      className='flex flex-col pt-24 md:pt-36 items-center text-center'>
+      className='flex flex-col pt-24 md:pt-40 items-center text-center'>
       <Image
         src='https://avatars.githubusercontent.com/u/74821917?v=4'
         alt='Andhika Dwi Khalisyahputra'

@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Andhika Dwi Khalisyahputra',
-  description: 'Personal website of Andhika Dwi Khalisyahputra',
+  description:
+    'Personal website to showcase projects and notes of Andhika Dwi Khalisyahputra',
 };
 
 export default function RootLayout({

@@ -19,3 +19,10 @@ const ProjectDetail = ({
 };
 
 export default ProjectDetail;
+
+export const generateStaticParams = () => {
+  const projects = getProjectMetadata();
+  return projects.map((projects) => {
+    slug: projects.slug;
+  });
+};

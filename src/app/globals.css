@@ -6,10 +6,10 @@
   @apply w-2;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-[#121212];
+  @apply bg-transparent;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-[#262626] rounded-2xl;
+  @apply bg-[#262626] rounded-md;
 }
 ::selection {
   @apply bg-emerald-600 text-gray-200;

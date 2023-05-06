@@ -21,7 +21,7 @@ const ProjectMetadata = (project: ProjectMetadata) => {
         className='w-full'
       />
       <h1 className='font-bold mt-4'>{project.title}</h1>
-      <p className='text-neutral-400'>{project.description}</p>
+      <p className='text-neutral-400 mt-2'>{project.description}</p>
       <div className='flex flex-row gap-2 mt-4 text-neutral-300'>
         <ul className='flex flex-row gap-2 flex-1'>
           {project.stack?.map((tech) => {
