@@ -36,7 +36,8 @@ const Hero = () => {
         width={128}
         height={128}
       />
-      <h1 className='text-white mt-4'>
+      {/* <p className='text-xl text-neutral-400'>OPEN FOR COLLABORATION</p> */}
+      <h1 className='text-white mt-2'>
         <span className='accent'>Andhika</span> Dwi Khalisyahputra
       </h1>
       <p className='text-sm md:text-base text-neutral-300 mt-2'>
