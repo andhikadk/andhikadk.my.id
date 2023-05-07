@@ -40,7 +40,7 @@ const Hero = () => {
         <span className='accent'>Andhika</span> Dwi Khalisyahputra
       </h1>
       <p className='text-sm md:text-base text-neutral-300 mt-2'>
-        A software engineer from Indonesia who love building things
+        Just a regular student who&apos;s obsessed with coding.
       </p>
       <div className='flex gap-4 mt-4'>
         {heroLinks.map(({ name, link, icon }) => {

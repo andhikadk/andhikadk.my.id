@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 import ProjectPreview from '@/components/ProjectPreview';
-import getProjectMetadata from '@/utils/getProjectMetadata';
+import { getProjectMetadata } from '@/utils/getProjects';
 
 const Projects = () => {
-  const projectMetadata = getProjectMetadata();
+  const projectMetadata = getProjectMetadata('web');
   const projectPreview = projectMetadata
     .sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
     .map((project) => <ProjectPreview key={project.slug} {...project} />)

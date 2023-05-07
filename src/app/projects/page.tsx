@@ -1,21 +1,35 @@
 import ProjectPreview from '@/components/ProjectPreview';
-import getProjectMetadata from '@/utils/getProjectMetadata';
+import { getProjectMetadata } from '@/utils/getProjects';
 
 const Projects = () => {
-  const projectMetadata = getProjectMetadata();
-
-  const projectPreview = projectMetadata
+  const webMetadata = getProjectMetadata('web');
+  const designMetadata = getProjectMetadata('design');
+  const webProjects = webMetadata
+    .sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
+    .map((project) => <ProjectPreview key={project.slug} {...project} />);
+  const designProjects = designMetadata
     .sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
     .map((project) => <ProjectPreview key={project.slug} {...project} />);
 
   return (
-    <section className='flex flex-col py-12 md:py-28'>
-      <h1 className='accent font-bold'>My Projects</h1>
-      <p className='text-neutral-200 mt-2'>
-        All projects i have worked on, both personal and professional.
-      </p>
-      <div className='grid grid-cols-3 mt-8 gap-4'>{projectPreview}</div>
-    </section>
+    <>
+      <section className='flex flex-col mt-12 md:mt-28'>
+        <h1 className='font-medium'>
+          Web <span className='accent font-bold'>Projects</span>
+        </h1>
+        <p className='text-neutral-200 mt-2'>
+          Showcase of my web development projects.
+        </p>
+        <div className='grid grid-cols-3 mt-8 gap-4'>{webProjects}</div>
+      </section>
+      <section className='flex flex-col mt-12 md:mt-28'>
+        <h1 className='font-medium'>
+          Design <span className='accent font-bold'>Projects</span>
+        </h1>
+        <p className='text-neutral-200 mt-2'>Showcase of my design projects.</p>
+        <div className='grid grid-cols-3 mt-8 gap-4'>{designProjects}</div>
+      </section>
+    </>
   );
 };
 

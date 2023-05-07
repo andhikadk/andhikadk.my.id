@@ -1,17 +1,13 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BiLink } from 'react-icons/bi';
-import * as SiIcon from 'react-icons/si';
 
-import { IconType } from '@/interfaces';
 import { ProjectMetadata } from '@/interfaces';
 
 import ProjectAction from './ProjectAction';
 import ProjectTechStack from './ProjectTechStack';
 
 const ProjectPreview = (project: ProjectMetadata) => {
-  const iconList: IconType = SiIcon;
   return (
     <div className='flex flex-col bg-neutral-800 bg-opacity-70 backdrop-blur-sm backdrop-filter p-4 rounded-md col-span-3 md:col-span-1'>
       <Link href={`/projects/${project.slug}`} className='link'>

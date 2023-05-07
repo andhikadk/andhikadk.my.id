@@ -3,8 +3,11 @@ import matter from 'gray-matter';
 
 import { ProjectMetadata } from '@/interfaces';
 
-const getProjectMetadata = (projectSlug?: string): ProjectMetadata[] => {
-  const folder = 'src/data/projects/';
+export const getProjectMetadata = (
+  type: string,
+  projectSlug?: string
+): ProjectMetadata[] => {
+  const folder = `src/data/projects/${type}/`;
   const files = fs.readdirSync(folder);
 
   if (projectSlug) {
@@ -53,4 +56,9 @@ const getProjectMetadata = (projectSlug?: string): ProjectMetadata[] => {
   return projects;
 };
 
-export default getProjectMetadata;
+export const getProjectContent = (type: string, projectSlug: string) => {
+  const folder = `src/data/projects/${type}/`;
+  const fileContents = fs.readFileSync(`${folder}${projectSlug}.mdx`, 'utf8');
+  const matterResult = matter(fileContents);
+  return matterResult.content;
+};

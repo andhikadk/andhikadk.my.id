@@ -19,7 +19,7 @@ const ProjectTechStack = ({
         if (isPreview && index > 2) return null;
         return (
           <li key={tech[1]}>
-            <Icon className='inline-block' size={16} />
+            <Icon className='inline-block' />
           </li>
         );
       })}
