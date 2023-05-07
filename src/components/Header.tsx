@@ -3,12 +3,14 @@ import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import * as AiIcon from 'react-icons/ai';
 
 import { routes } from '@/constants';
-import { Icon } from '@iconify/react';
+import { IconType } from '@/interfaces';
 
 const Header = () => {
   const pathname = usePathname();
+  const iconList: IconType = AiIcon;
 
   return (
     <header>
@@ -16,6 +18,9 @@ const Header = () => {
         <div className='flex flex-row text-white gap-8'>
           {routes.map((route) => {
             const isRouteActive = pathname === route.path;
+            const Icon = isRouteActive
+              ? iconList[route.icon.active]
+              : iconList[route.icon.inactive];
             return (
               <Link
                 href={route.path}
@@ -24,11 +29,7 @@ const Header = () => {
                   'flex flex-row items-center justify-center gap-2 font-semibold hover:text-emerald-500',
                   isRouteActive && 'text-emerald-500'
                 )}>
-                <Icon
-                  icon={isRouteActive ? route.icon.active : route.icon.inactive}
-                  width='20'
-                  height='20'
-                />
+                <Icon className='inline-block' size={20} />
                 <span className='hidden md:inline'>{route.name}</span>
               </Link>
             );

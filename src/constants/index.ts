@@ -1,54 +1,36 @@
-import { FooterLink, HeroLink, Route } from '@/interfaces';
-
-export const heroLinks: HeroLink[] = [
-  {
-    name: 'LinkedIn',
-    link: 'https://linkedin.com/in/andhikadk/',
-    icon: 'mdi:linkedin',
-  },
-  {
-    name: 'GitHub',
-    link: 'https://github.com/andhikadk',
-    icon: 'mdi:github',
-  },
-  {
-    name: 'Resume',
-    link: 'https://cakeresume.com/andhikadk',
-    icon: 'mdi:file-document-edit-outline',
-  },
-];
+import { FooterLink, Route } from '@/interfaces';
 
 export const routes: Route[] = [
   {
     name: 'Home',
     path: '/',
     icon: {
-      active: 'fluent:home-24-filled',
-      inactive: 'fluent:home-24-regular',
+      active: 'AiFillHome',
+      inactive: 'AiOutlineHome',
     },
   },
   {
     name: 'Projects',
     path: '/projects',
     icon: {
-      active: 'fluent:clipboard-code-24-filled',
-      inactive: 'fluent:clipboard-code-24-regular',
+      active: 'AiFillProject',
+      inactive: 'AiOutlineProject',
     },
   },
   {
     name: 'Notes',
     path: '/notes',
     icon: {
-      active: 'fluent:note-24-filled',
-      inactive: 'fluent:note-24-regular',
+      active: 'AiFillFile',
+      inactive: 'AiOutlineFile',
     },
   },
   {
     name: 'About',
     path: '/about',
     icon: {
-      active: 'fluent:info-24-filled',
-      inactive: 'fluent:info-24-regular',
+      active: 'AiFillInfoCircle',
+      inactive: 'AiOutlineInfoCircle',
     },
   },
 ];

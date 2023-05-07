@@ -1,11 +1,14 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BiLink } from 'react-icons/bi';
 import * as SiIcon from 'react-icons/si';
 
 import { IconType } from '@/interfaces';
 import { ProjectMetadata } from '@/interfaces';
-import { Icon } from '@iconify/react';
+
+import ProjectAction from './ProjectAction';
+import ProjectTechStack from './ProjectTechStack';
 
 const ProjectPreview = (project: ProjectMetadata) => {
   const iconList: IconType = SiIcon;
@@ -29,34 +32,8 @@ const ProjectPreview = (project: ProjectMetadata) => {
       </h4>
       <p className='text-neutral-400 flex-1'>{project.description}</p>
       <div className='flex flex-row justify-end gap-2 mt-2 text-neutral-300'>
-        <ul className='flex flex-row gap-2 flex-1'>
-          {project.stack
-            ?.map((tech) => {
-              const Icon = iconList[tech[1]];
-              return (
-                <li key={tech[1]}>
-                  <Icon className='inline-block' size={16} />
-                </li>
-              );
-            })
-            .slice(0, 3)}
-        </ul>
-        {project.source && (
-          <Link
-            href={project.source}
-            target='_blank'
-            className='flex items-center gap-1 link animated-underline'>
-            <Icon icon='mdi:github' /> Source
-          </Link>
-        )}
-        {project.demo && (
-          <Link
-            href={project.demo}
-            target='_blank'
-            className='flex items-center gap-1 link animated-underline'>
-            <Icon icon='mdi:link-variant' /> Demo
-          </Link>
-        )}
+        <ProjectTechStack stack={project.stack} isPreview />
+        <ProjectAction source={project.source} demo={project.demo} />
       </div>
     </div>
   );

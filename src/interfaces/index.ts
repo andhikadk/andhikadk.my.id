@@ -12,7 +12,7 @@ export interface ProjectMetadata {
 export interface HeroLink {
   name: string;
   link: string;
-  icon: string;
+  icon: JSX.Element;
 }
 
 export interface Route {
