@@ -1,5 +1,6 @@
 import React from 'react';
 import * as SiIcon from 'react-icons/si';
+import { Tooltip } from 'react-tooltip';
 
 import { IconType } from '@/interfaces';
 
@@ -19,7 +20,12 @@ const ProjectTechStack = ({
         if (isPreview && index > 2) return null;
         return (
           <li key={tech[1]}>
-            <Icon className='inline-block' />
+            <Tooltip id={tech[0]} />
+            <Icon
+              className='inline-block cursor-pointer'
+              data-tooltip-id={tech[0]}
+              data-tooltip-content={tech[0]}
+            />
           </li>
         );
       })}

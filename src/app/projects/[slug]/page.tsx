@@ -33,12 +33,12 @@ const ProjectDetail = ({
   };
 
   return (
-    <>
+    <div className='layout-article'>
       <ProjectMetadata {...web} {...design} />
-      <article className='prose prose-invert md:text-justify mt-8'>
+      <article className='prose prose-invert max-w-4xl mt-8'>
         <Markdown options={options}>{webContent + designContent}</Markdown>
       </article>
-    </>
+    </div>
   );
 };
 

@@ -19,6 +19,10 @@
   @apply max-w-6xl px-6 mx-auto;
 }
 
+.layout-article {
+  @apply md:max-w-4xl mx-auto;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
