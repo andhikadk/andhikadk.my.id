@@ -41,7 +41,7 @@ const Hero = () => {
         <span className='accent'>Andhika</span> Dwi Khalisyahputra
       </h1>
       <p className='text-sm md:text-base text-neutral-300 mt-2'>
-        Just a regular student who&apos;s obsessed with coding.
+        Designer? Software engineer? I don&apos;t know, I just love to code.
       </p>
       <div className='flex gap-4 mt-4'>
         {heroLinks.map(({ name, link, icon }) => {
@@ -51,9 +51,11 @@ const Hero = () => {
               href={link}
               target='_blank'
               rel='noopener noreferrer'
-              className='flex flex-row items-center gap-1 text-neutral-400 link'>
+              className='flex flex-row items-center gap-2 text-neutral-400 link'>
               {icon}
-              <span className='hidden md:inline'>{name}</span>
+              <span className='hidden md:inline animated-underline'>
+                {name}
+              </span>
             </Link>
           );
         })}

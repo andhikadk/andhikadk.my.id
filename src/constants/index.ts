@@ -39,6 +39,11 @@ export const footerLinks: FooterLink[] = [
   {
     name: 'Source Code',
     link: 'https://github.com/andhikadk/andhikadk.my.id',
+    target: '_blank',
+  },
+  {
+    name: 'Design System',
+    link: '/design',
   },
   {
     name: 'Email',
@@ -47,13 +52,15 @@ export const footerLinks: FooterLink[] = [
   {
     name: 'Notion',
     link: 'https://andhika.notion.site',
+    target: '_blank',
   },
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/andhikadk',
+    target: '_blank',
   },
   {
     name: 'Sandbox',
-    link: 'https://andhikadk.my.id/sandbox',
+    link: '/sandbox',
   },
 ];

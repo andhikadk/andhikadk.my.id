@@ -9,6 +9,14 @@ export interface ProjectMetadata {
   slug: string;
 }
 
+export interface NoteMetadata {
+  title: string;
+  created: string;
+  updated?: string;
+  tags: string[];
+  slug: string;
+}
+
 export interface HeroLink {
   name: string;
   link: string;
@@ -27,6 +35,7 @@ export interface Route {
 export interface FooterLink {
   name: string;
   link: string;
+  target?: string;
 }
 
 export interface IconType {

@@ -26,7 +26,7 @@ const ProjectDetail = ({
     overrides: {
       h2: {
         props: {
-          className: 'text-emerald-500 pt-8 -mt-8',
+          className: 'text-emerald-500 pt-8 -mt-4',
         },
       },
     },

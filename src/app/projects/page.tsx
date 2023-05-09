@@ -24,7 +24,7 @@ const Projects = () => {
       </section>
       <section className='flex flex-col mt-12 md:mt-28'>
         <h1 className='font-medium'>
-          Design <span className='accent font-bold'>Projects</span>
+          Design <span className='accent font-bold'>Archives</span>
         </h1>
         <p className='text-neutral-200 mt-2'>Showcase of my design projects.</p>
         <div className='grid grid-cols-3 mt-8 gap-4'>{designProjects}</div>

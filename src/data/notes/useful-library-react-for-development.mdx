@@ -1,0 +1,101 @@
+---
+title: Useful Library React for Development
+created: 2023-05-09
+tags:
+  - react
+  - library
+  - development
+---
+
+I often forget things and lack consistency in my projects. So I decided to create a list of useful libraries for React development.
+
+Here are some of the libraries I use in my projects:
+
+## eslint-plugin-simple-import-sort
+
+This library is used to sort imports in a file. It is very useful to keep the code clean and consistent. For more information, you can refer to the [docs](https://www.npmjs.com/package/eslint-plugin-simple-import-sort)
+
+Installation:
+
+```bash
+yarn add -D eslint-plugin-simple-import-sort
+```
+
+Usage:
+
+```json
+{
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  }
+}
+```
+
+My personal configuration:
+
+```json
+{
+  "overrides": [
+    {
+      "files": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mdx"],
+      "rules": {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              // `react` first, `next` second, then packages starting with a character
+              ["^react$", "^next", "^[a-z]"],
+              // Packages starting with `@`
+              ["^@"],
+              // Packages starting with `~`
+              ["^~"],
+              // Imports starting with `../`
+              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+              // Imports starting with `./`
+              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+              // Style imports
+              ["^.+\\.s?css$"],
+              // Side effect imports
+              ["^\\u0000"]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+## clsx
+
+This library is used to combine class names. It is very useful to keep the code clean and consistent.
+
+Installation:
+
+```bash
+yarn add clsx
+```
+
+Usage:
+
+```javascript
+import clsx from 'clsx';
+```
+
+## react-icons
+
+This library is used to add icons to the project. It is very useful to keep the code clean and consistent.
+
+Installation:
+
+```bash
+yarn add react-icons
+```
+
+Usage:
+
+```javascript
+import * as SiIcon from 'react-icons/si';
+```
