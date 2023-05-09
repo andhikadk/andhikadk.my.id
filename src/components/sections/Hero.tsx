@@ -1,8 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CgNotes } from 'react-icons/cg';
-import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { SiGithub, SiGmail, SiLinkedin } from 'react-icons/si';
 
 import { HeroLink } from '@/interfaces';
 
@@ -18,9 +17,9 @@ const heroLinks: HeroLink[] = [
     icon: <SiGithub className='w-6 h-6 md:w-5 md:h-5' />,
   },
   {
-    name: 'Resume',
-    link: 'https://cakeresume.com/andhikadk',
-    icon: <CgNotes className='w-6 h-6 md:w-5 md:h-5' />,
+    name: 'Email',
+    link: 'mailto:andhikadwi980@gmail.com',
+    icon: <SiGmail size={32} className='w-6 h-6 md:w-5 md:h-5' />,
   },
 ];
 
