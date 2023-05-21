@@ -10,12 +10,12 @@ const Notes = () => {
   return (
     <section className='flex flex-col mt-12 md:mt-28'>
       <h1 className='font-medium'>
-        My <span className='accent font-bold'>Notes</span>
+        My <span className='font-bold accent'>Notes</span>
       </h1>
-      <p className='text-neutral-200 mt-2'>
+      <p className='mt-2 text-neutral-200'>
         Showcase of my notes and thoughts.
       </p>
-      <div className='grid grid-cols-3 mt-8 gap-4'>{notes}</div>
+      <div className='grid grid-cols-3 gap-4 mt-8'>{notes}</div>
     </section>
   );
 };

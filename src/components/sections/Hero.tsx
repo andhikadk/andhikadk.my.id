@@ -27,20 +27,20 @@ const Hero = () => {
   return (
     <section
       id='hero'
-      className='flex flex-col pt-24 md:pt-40 items-center text-center'>
+      className='flex flex-col items-center pt-24 text-center md:pt-40'>
       <Image
         src='https://avatars.githubusercontent.com/u/74821917?v=4'
         alt='Andhika Dwi Khalisyahputra'
-        className='rounded-full'
+        className='duration-300 rounded-full hover:-translate-y-2'
         width={128}
         height={128}
       />
       {/* <p className='text-xl text-neutral-400'>OPEN FOR COLLABORATION</p> */}
-      <h1 className='text-white mt-2'>
+      <h1 className='mt-4 text-white'>
         <span className='accent'>Andhika</span> Dwi Khalisyahputra
       </h1>
-      <p className='text-sm md:text-base text-neutral-300 mt-2'>
-        Designer? Software engineer? I don&apos;t know, I just love to code.
+      <p className='mt-2 text-sm md:text-base text-neutral-300'>
+        Just student who loves experimenting with some technologies.
       </p>
       <div className='flex gap-4 mt-4'>
         {heroLinks.map(({ name, link, icon }) => {

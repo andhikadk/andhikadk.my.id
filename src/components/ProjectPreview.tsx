@@ -9,14 +9,14 @@ import ProjectTechStack from './ProjectTechStack';
 
 const ProjectPreview = (project: ProjectMetadata) => {
   return (
-    <div className='flex flex-col bg-neutral-800 bg-opacity-70 backdrop-blur-sm backdrop-filter p-4 rounded-md col-span-3 md:col-span-1'>
+    <div className='flex flex-col col-span-3 p-4 rounded-md bg-neutral-800 bg-opacity-70 backdrop-blur-sm backdrop-filter md:col-span-1'>
       <Link href={`/projects/${project.slug}`} className='link'>
         <Image
           src={`/images/projects/${project.slug}.png`}
           alt={project.title}
           width={400}
           height={225}
-          className='w-full hover:scale-95 duration-300 rounded-sm'
+          className='w-full duration-300 rounded-sm hover:scale-95'
         />
       </Link>
       <h4 className='mt-4'>
@@ -26,7 +26,7 @@ const ProjectPreview = (project: ProjectMetadata) => {
           {project.title}
         </Link>
       </h4>
-      <p className='text-neutral-400 flex-1'>{project.description}</p>
+      <p className='flex-1 text-neutral-400'>{project.description}</p>
       <div className='flex flex-row justify-end gap-2 mt-2 text-neutral-300'>
         <ProjectTechStack stack={project.stack} isPreview />
         <ProjectAction source={project.source} demo={project.demo} />

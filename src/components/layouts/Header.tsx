@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header>
       <nav className='flex items-center justify-center'>
-        <div className='flex flex-row text-white gap-8'>
+        <div className='flex flex-row gap-8 text-white'>
           {routes.map((route) => {
             const isRouteActive = pathname === route.path;
             const Icon = isRouteActive

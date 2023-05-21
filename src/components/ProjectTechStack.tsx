@@ -13,7 +13,7 @@ const ProjectTechStack = ({
 }) => {
   const iconList: IconType = SiIcon;
   return (
-    <ul className='flex flex-row gap-2 flex-1'>
+    <ul className='flex flex-row flex-1 gap-2'>
       {stack.map((tech, index) => {
         const Icon = iconList[tech[1]];
         if (isPreview && index > 2) return null;

@@ -4,8 +4,8 @@ import { AiOutlineFork, AiOutlineStar } from 'react-icons/ai';
 
 const RepoPreview = ({ repo }: any) => {
   return (
-    <div className='flex flex-col bg-neutral-800 bg-opacity-70 backdrop-blur-sm backdrop-filter shadow-md rounded-md p-4'>
-      <h3 className='font-bold text-lg'>
+    <div className='flex flex-col p-4 rounded-md shadow-md bg-neutral-800 bg-opacity-70 backdrop-blur-sm backdrop-filter'>
+      <h3 className='text-lg font-bold'>
         <Link
           href={repo.html_url}
           target='_blank'
@@ -13,18 +13,18 @@ const RepoPreview = ({ repo }: any) => {
           {repo.name}
         </Link>
       </h3>
-      <p className='text-gray-400 mt-2 flex-1'>{repo.description}</p>
-      <div className='flex flex-row gap-2 items-center mt-4'>
-        <span className='text-sm font-semibold flex items-center gap-1'>
+      <p className='flex-1 mt-2 text-gray-400'>{repo.description}</p>
+      <div className='flex flex-row items-center gap-2 mt-4'>
+        <span className='flex items-center gap-1 text-sm font-semibold'>
           {repo.language && repo.language}
         </span>
-        <span className='text-sm font-semibold flex items-center gap-1'>
+        <span className='flex items-center gap-1 text-sm font-semibold'>
           {repo.forks_count} <AiOutlineFork />
         </span>
-        <span className='text-sm font-semibold flex items-center gap-1 flex-1'>
+        <span className='flex items-center flex-1 gap-1 text-sm font-semibold'>
           {repo.stargazers_count} <AiOutlineStar />
         </span>
-        <span className='text-neutral-400 text-sm'>
+        <span className='text-sm text-neutral-400'>
           {new Date(repo.pushed_at).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',

@@ -12,14 +12,14 @@ const AboutPage = () => {
     <>
       <section id='about-me' className='flex flex-col pt-12 md:pt-28'>
         <h1>
-          About <span className='accent font-bold'>Me</span>
+          About <span className='font-bold accent'>Me</span>
         </h1>
-        <div className='grid grid-cols-3 place-items-center gap-4'>
-          <div className='col-span-3 md:col-span-1 md:order-last py-4 md:py-0'>
+        <div className='grid grid-cols-3 gap-4 place-items-center'>
+          <div className='col-span-3 py-4 md:col-span-1 md:order-last md:py-0'>
             <Image
               src='https://avatars.githubusercontent.com/u/74821917?v=4'
               alt='Andhika Dwi Khalisyahputra'
-              className='rounded-md hover:-rotate-3 duration-300'
+              className='duration-300 rounded-md hover:-rotate-3'
               quality={100}
               width={256}
               height={256}

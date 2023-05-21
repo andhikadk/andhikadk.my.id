@@ -40,7 +40,7 @@ const ProjectDetail = ({
   return (
     <div className='layout-article'>
       <NoteMetadata {...note} />
-      <article className='prose prose-invert max-w-4xl mt-4'>
+      <article className='max-w-4xl mt-4 prose prose-invert'>
         <Markdown options={options}>{noteContent}</Markdown>
       </article>
     </div>
