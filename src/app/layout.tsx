@@ -12,6 +12,16 @@ export const metadata = {
   title: 'Andhika Dwi Khalisyahputra',
   description:
     'Personal website to showcase projects and notes of Andhika Dwi Khalisyahputra',
+  applicationName: 'Andhika Dwi Khalisyahputra',
+  authors: [
+    {
+      name: 'Andhika Dwi Khalisyahputra',
+      url: 'https://andhikadk.my.id',
+    },
+  ],
+  themeColor: '#121212',
+  colorScheme: 'dark',
+  robots: 'index, follow',
 };
 
 export default function RootLayout({

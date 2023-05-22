@@ -27,13 +27,14 @@ const AboutPage = () => {
           </div>
           <article className='col-span-3 md:col-span-2'>
             <p className='mt-4'>
-              Hi, my name is Andhika Dwi Khalisyahputra. I&apos;m a software
-              engineer from Indonesia who prefer backend development. I am
-              currently studying at Polinema majoring in Business Information
-              System. since 2021, I started learning the programming logic with
-              Java. Then I learned the basics of web development since early
-              2022 cause in college there are basic web development subjects. of
-              course I learned it with HTML, CSS, PHP and Javascript.
+              Hi, my name is <span className='font-bold accent'>Andhika</span>{' '}
+              Dwi Khalisyahputra. I&apos;m a software engineer from Indonesia
+              who prefer backend development. I am currently studying at
+              Polinema majoring in Business Information System. since 2021, I
+              started learning the programming logic with Java. Then I learned
+              the basics of web development since early 2022 cause in college
+              there are basic web development subjects. of course I learned it
+              with HTML, CSS, PHP and Javascript.
             </p>
             <p className='mt-4'>
               I possess strong logical reasoning skills and am a fast learner.

@@ -16,6 +16,7 @@ const ProjectPreview = (project: ProjectMetadata) => {
           alt={project.title}
           width={400}
           height={225}
+          quality={50}
           className='w-full duration-300 rounded-sm hover:scale-95'
         />
       </Link>
