@@ -1,5 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
+import path from 'path';
 
 import { ProjectMetadata } from '@/interfaces';
 
@@ -7,7 +8,7 @@ export const getProjectMetadata = (
   type: string,
   projectSlug?: string
 ): ProjectMetadata[] => {
-  const folder = `src/data/projects/${type}/`;
+  const folder = path.join(process.cwd(), `src/data/projects/${type}/`);
   const files = fs.readdirSync(folder);
 
   if (projectSlug) {
@@ -57,7 +58,7 @@ export const getProjectMetadata = (
 };
 
 export const getProjectContent = (type: string, projectSlug: string) => {
-  const folder = `src/data/projects/${type}/`;
+  const folder = path.join(process.cwd(), `src/data/projects/${type}/`);
   const fileContents = fs.readFileSync(`${folder}${projectSlug}.mdx`, 'utf8');
   const matterResult = matter(fileContents);
   return matterResult.content;
