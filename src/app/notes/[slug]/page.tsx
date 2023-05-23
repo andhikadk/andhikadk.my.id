@@ -4,7 +4,6 @@ import { getNoteContent, getNoteMetadata } from '@/utils/getNotes';
 
 import NotFound from './not-found';
 import NoteMetadata from './NoteMetadata';
-// import ProjectMetadata from './ProjectMetadata';
 
 const ProjectDetail = ({
   params,

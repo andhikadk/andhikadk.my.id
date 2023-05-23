@@ -14,8 +14,8 @@ const Header = () => {
 
   return (
     <header>
-      <nav className='flex items-center justify-center'>
-        <div className='flex flex-row gap-8 text-white'>
+      <nav className='flex items-center h-fit'>
+        <div className='flex flex-row gap-6 text-white md:gap-8'>
           {routes.map((route) => {
             const isRouteActive = pathname === route.path;
             const Icon = isRouteActive
@@ -23,14 +23,16 @@ const Header = () => {
               : iconList[route.icon.inactive];
             return (
               <Link
-                href={route.path}
                 key={route.path}
+                href={route.path}
                 className={clsx(
-                  'flex flex-row items-center justify-center gap-2 font-semibold hover:text-emerald-500',
+                  'flex flex-col md:flex-row items-center justify-center gap-2 font-semibold hover:text-emerald-500',
                   isRouteActive && 'text-emerald-500'
                 )}>
-                <Icon className='inline-block' size={20} />
-                <span className='hidden md:inline'>{route.name}</span>
+                <Icon className='inline-block w-5 h-5' />
+                <span className='inline text-xs md:text-base'>
+                  {route.name}
+                </span>
               </Link>
             );
           })}

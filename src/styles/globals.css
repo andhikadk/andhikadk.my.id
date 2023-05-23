@@ -34,7 +34,7 @@
     overflow-y: overlay;
   }
   header {
-    @apply fixed bottom-6 left-1/2 -translate-x-1/2 py-4 px-8 h-fit md:top-4 bg-neutral-900 bg-opacity-90 backdrop-blur-sm backdrop-filter z-30 rounded-md shadow-lg;
+    @apply fixed bottom-4 left-1/2 -translate-x-1/2 py-4 px-8 h-fit md:top-4 bg-neutral-900 bg-opacity-90 backdrop-blur-sm backdrop-filter z-30 rounded-md shadow-lg;
   }
   h1 {
     @apply text-2xl md:text-4xl font-bold;

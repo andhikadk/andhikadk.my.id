@@ -43,7 +43,11 @@ export const footerLinks: FooterLink[] = [
   },
   {
     name: 'Design System',
-    link: '/design',
+    link: '/#',
+  },
+  {
+    name: 'Sandbox',
+    link: '/#',
   },
   {
     name: 'Email',
@@ -58,9 +62,5 @@ export const footerLinks: FooterLink[] = [
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/andhikadk',
     target: '_blank',
-  },
-  {
-    name: 'Sandbox',
-    link: '/sandbox',
   },
 ];

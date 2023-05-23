@@ -25,12 +25,19 @@ const NotePreview = (notes: NoteMetadata) => {
       </h4>
       <div className='flex flex-row flex-1 gap-2 mt-2 text-neutral-300'>
         {notes.tags.map((tag) => (
-          <p key={tag} className='link animated-underline'>
-            <Link href={`/notes/tag/${tag}`}>#{tag}</Link>
+          <p key={tag}>
+            <Link
+              href={`/notes/tag/${tag}`}
+              className='link animated-underline'>
+              #{tag}
+            </Link>
           </p>
         ))}
       </div>
-      <p className='mt-2 text-neutral-400'>{date}</p>
+      <p className='mt-2 text-neutral-400'>
+        {notes.updated ? 'Updated on ' : 'Created on '}
+        {date}
+      </p>
     </div>
   );
 };
