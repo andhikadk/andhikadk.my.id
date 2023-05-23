@@ -1,10 +1,11 @@
 import fs from 'fs';
 import matter from 'gray-matter';
+import path from 'path';
 
 import { NoteMetadata } from '@/interfaces';
 
 export const getNoteMetadata = (noteSlug?: string): NoteMetadata[] => {
-  const folder = `src/data/notes/`;
+  const folder = path.join(process.cwd(), `src/data/notes/`);
   const files = fs.readdirSync(folder);
 
   if (noteSlug) {
@@ -43,7 +44,7 @@ export const getNoteMetadata = (noteSlug?: string): NoteMetadata[] => {
 };
 
 export const getNoteContent = (noteSlug: string) => {
-  const folder = `src/data/notes/`;
+  const folder = path.join(process.cwd(), `src/data/notes/`);
   const fileContents = fs.readFileSync(`${folder}${noteSlug}.mdx`, 'utf8');
   const matterResult = matter(fileContents);
   return matterResult.content;
